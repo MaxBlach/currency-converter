@@ -1,0 +1,153 @@
+/*------------------------------------*\
+  #VARIABLES
+\*------------------------------------*/
+
+:root {
+    --color-primary: #1e90ff;
+    --color-primary-light: #70a1ff;
+    --color-warning: #ff4757;
+    --color-text: #2f3542;
+    --color-bg: #f1f2f6;
+
+    --font-family-text: 'Poppins', sans-serif;
+    --font-family-title: 'Lora', serif;
+}
+
+
+
+/*------------------------------------*\
+  #BASES
+\*------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: clamp(62.5%, .583vw, 100%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    font-family: var(--font-family-text);
+    font-size: 1.6rem;
+    color: var(--color-text);
+
+    background-color: var(--color-bg);
+}
+
+h1, h2 {
+    font-family: var(--font-family-title);
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input {
+    outline: 0;
+    border: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+::placeholder {
+    color: #a4b0be;
+}
+
+
+/*------------------------------------*\
+  #CONVERTER
+\*------------------------------------*/
+
+.converter {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.converter__title {
+    margin-bottom: 3rem;
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+.converter__form {
+    width: 100%;
+    padding: 4rem 2rem;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px 0 rgba(99,99,99,.2);
+}
+
+.converter__subtitle {
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.converter__help {
+    display: block;
+    margin-bottom: 2rem;
+    font-style: italic;
+    text-align: center;
+    opacity: .9;
+}
+
+.converter__form ul {
+    padding-left: 7rem;
+    font-size: 1.2rem;
+    color: var(--color-warning);
+}
+
+.converter__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.converter__item label {
+    font-size: 1.4rem;
+    white-space: nowrap;
+}
+
+.converter__item input,
+.converter__item select {
+    width: 100%;
+    padding: .8em;
+    font-family: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 4px;
+}
+
+.converter__item input:focus {
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.converter__button {
+    display: block;
+    margin-left: auto;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    background-color: var(--color-primary);
+    border-radius: 4px;
+    transition: background-color .3s ease-in-out;
+}
+
+.converter__button:hover {
+    background-color: var(--color-primary-light);
+}

@@ -1,0 +1,4 @@
+Démarche technique abordée :
+Puisqu'il n'y a que deux devises et qu'il y a une contrainte de temps, j'ai décidé de faire la logique dans le controler directement.
+La meilleur façon de gérer plusieurs devises serait de créer une entité devise et de changer le if else ligne 58 du controller en utilisant un switch case.
+De plus, pour ordonner le code, on mettrait la logique qui est dans le controlleur dans des méthodes de cette nouvelle entité.

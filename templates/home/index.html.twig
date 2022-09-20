@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="converter">
+        <h1 class="converter__title">Taux de change</h1>
+
+        {{ form_start(form, {attr: {class: 'converter__form'}}) }}
+            <h2 class="converter__subtitle">Calculer le taux de change de ces valeurs</h2>
+            <small class="converter__help">Si les deux monnaies sont différentes, la première sera convertie en la seconde</small>
+
+            {{ form_errors(form.value1) }}
+            <div class="converter__item">
+                <label for="form_value1">Valeur 1</label>
+                {{ form_widget(form.value1) }}
+                {{ form_widget(form.symbol1) }}
+            </div>
+
+            {{ form_errors(form.value2) }}
+            <div class="converter__item">
+                <label for="form_value2">Valeur 2</label>
+                {{ form_widget(form.value2) }}
+                {{ form_widget(form.symbol2) }}
+            </div>
+
+            <button class="converter__button">Calculer</button>
+
+            {% if result %}
+                <h2 class="converter__result">{{ result.value|format_currency(result.symbol) }}</h2>
+            {% endif %}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
